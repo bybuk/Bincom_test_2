@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Combined {{ lga_name }} LGA Results</h1>
+    <ul>
+        {% for abbreviation, score in party_scores.items() %}
+            <li>{{ abbreviation }}: {{ score }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

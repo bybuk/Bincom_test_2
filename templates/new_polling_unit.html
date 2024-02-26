@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Create new polling unit</h1>
+    <form action="/new_polling_unit" method="post">
+        <label for="n_polling_unit_id">Polling Unit ID:</label>
+        <input type="number" id="n_polling_unit_id" name="n_polling_unit_id" required><br><br>
+        
+        <label for="n_ward_id">Ward ID:</label>
+        <input type="number" id="n_ward_id" name="n_ward_id" required><br><br>
+
+        <label for="n_lga_id">LGA ID:</label>
+        <input type="number" id="n_lga_id" name="n_lga_id" required><br><br>
+
+        <label for="n_uniquewardid">Unique Ward ID:</label>
+        <input type="number" id="n_uniquewardid" name="n_uniquewardid" required><br><br>
+
+        <label for="n_polling_unit_number">Polling Unit Number:</label>
+        <input type="text" id="n_polling_unit_number" name="n_polling_unit_number" required><br><br>
+
+        <label for="n_polling_unit_name">Polling Unit Name:</label>
+        <input type="text" id="n_polling_unit_name" name="n_polling_unit_name" required><br><br>
+
+        <label for="n_polling_unit_description">Polling Unit Description:</label>
+        <textarea rows="4" cols="50" id="n_polling_unit_description" name="n_polling_unit_description"></textarea>
+
+        <label for="n_lat">Latitude:</label>
+        <input type="number" step="0.000000001" id="n_lat" name="n_lat" required><br><br>
+
+        <label for="n_long">Longitude:</label>
+        <input type="number" step="0.000000001" id="n_long" name="n_long" required><br><br>
+
+        <label for="n_entered_by_user">Polling Unit Created by:</label>
+        <input type="text" id="n_entered_by_user" name="n_entered_by_user" required><br><br>
+
+        <label for="n_date_entered">Date Entered (YYYY-MM-DD HH:MM:SS):</label>
+        <input type="text" id="n_date_entered" name="n_date_entered"><br><br>
+
+        <label for="n_user_ip_address">User IP Address:</label>
+        <input type="text" id="n_user_ip_address" name="n_user_ip_address" required><br><br>
+
+        <input type="submit" value="Create New Polling Unit">
+    </form>
+
+{% endblock %}

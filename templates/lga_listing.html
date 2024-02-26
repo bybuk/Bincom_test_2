@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>LGA Listing</h1>
+    <form action="/results" method="post">
+        <label for="lga_id">Select Local Government:</label>
+        <select id="lga_id" name="lga_id">
+            {% for id, name in lga_list %}
+                <option value="{{ id }}">{{ name }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Results for {{ polling_unit_name }}</h1>
+    {% if results %}
+        <ul>
+            {% for abbreviation, score in results.items() %}
+                <li>{{ abbreviation }}: {{ score }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found for this polling unit.</p>
+    {% endif %}
+{% endblock %}

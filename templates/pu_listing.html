@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Polling Units</h1>
+    <form action="/display_results" method="post">
+        <label for="polling_unit">Select Polling Unit:</label>
+        <select id="polling_unit" name="polling_unit">
+            {% for id, name in polling_units %}
+                <option value="{{ id }}">{{ name }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+{%  endblock %}

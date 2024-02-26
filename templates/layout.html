@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bincom Test</title>
+</head>
+<body>
+<h2>Election Results</h2>
+<a href="{{ url_for('index') }}">Home</a>
+<a href="{{ url_for('pu_list') }}">Pull Unit</a>
+<a href="{{ url_for('create_polling_unit') }}">Create Pull Unit</a>
+{% block body %}
+
+<p>This is a Flask application.</p>
+
+
+{% endblock %}
+</body>
+</html>
